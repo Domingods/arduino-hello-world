@@ -1,4 +1,5 @@
 const { Board, Led } = require('johnny-five');
+const { cachedDataVersionTag } = require('v8');
 const board = new Board();
 const stdin = process.stdin;
 
@@ -30,7 +31,8 @@ board.on('ready', () => {
     console.log('- "1" acender o LED');
     console.log('- "2" apagar o LED');
     console.log('- "3" pulsa o LED');
-    console.log('- "Ctrl+C" encerrar o programa');
+    console.log('- "Ctrl+C" encerrar o programa \n');
+    console.log('-  VERSAO_03')  
 
   });
 });
